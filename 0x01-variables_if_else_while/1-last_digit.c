@@ -4,8 +4,8 @@
 
 /**
  * main - Checks whether the last digit of a number is >5 or <5 or =5 and
- * 	prints it.
- * 
+ *	prints it.
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
