@@ -2,7 +2,7 @@
 
 /**
  * main - output { char ch | ch != 'q' or ch != 'e' }
- * 
+ *
  * Return: Always 0 (Sucess)
  */
 int main(void)
