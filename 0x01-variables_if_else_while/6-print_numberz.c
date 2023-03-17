@@ -2,7 +2,7 @@
 
 /**
  * main - the silly version of '5-print_numbers.c',
- * 	cause we need to do hard things even if they are useless ¯\_(ツ)_/¯.
+ *	cause we need to do hard things even if they are useless ¯\_(ツ)_/¯.
  *
  * Return: Always 0 (Success)
  */
