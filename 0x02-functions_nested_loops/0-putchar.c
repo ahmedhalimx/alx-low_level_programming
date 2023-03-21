@@ -1,8 +1,23 @@
 #include <stdio.h>
 #include "main.h"
 
-int main()
+#include "main.h"
+/**
+ * main - print _putchar letter by letter.
+ * 
+ * Return: (0) For Success
+ */
+
+int main(void)
 {
-	printf("_purchar\n");
-	return 0;
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+	return (0);
 }
