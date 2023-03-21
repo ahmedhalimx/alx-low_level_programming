@@ -4,7 +4,7 @@
 #include "main.h"
 /**
  * main - print _putchar letter by letter.
- * 
+ *
  * Return: (0) For Success
  */
 
