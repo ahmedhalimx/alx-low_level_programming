@@ -31,7 +31,7 @@ char *cap_string(char *s)
 			case (')'):
 			case ('{'):
 			case ('}'):
-				s[i + 1] = s[i + 1] - ('a' - 'A');
+				s[i + 1] = s[i + 1] - 32;
 				break;
 		}
 	}
