@@ -16,7 +16,12 @@ char *cap_string(char *s)
 			continue;
 		}
 
-		switch (s[i])
+		if (i == 0)
+		{
+			s[i] = s[i] - 32;
+		}
+
+		switch (s[i - 1])
 		{
 			case (' '):
 			case ('\t'):
@@ -31,7 +36,7 @@ char *cap_string(char *s)
 			case (')'):
 			case ('{'):
 			case ('}'):
-				s[i + 1] = s[i + 1] - 32;
+				s[i] = s[i] - 32;
 				break;
 		}
 	}
