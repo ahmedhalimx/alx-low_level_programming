@@ -2,11 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_buffer - prints buffer
- * 
- * @b: buffer
+ * print_buffer - prints the buffer
+ * @b: string buffer
  * @size: size
- * 
  * Return: void
  */
 
