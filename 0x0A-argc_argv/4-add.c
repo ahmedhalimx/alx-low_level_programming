@@ -14,12 +14,13 @@ int main(int argc, char *argv[])
 	int i, j;
 
 	j = 0;
-	
-	i = 0;
-	for (i; i < argc; i++)
+
+	for (i = 0; i < argc; i++)
 	{
 		if (isdigit(argv[i]))
+		{
 			j += atoi(argv[i]);
+		}
 		else
 		{
 			printf("Error\n");
@@ -31,3 +32,4 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
+
