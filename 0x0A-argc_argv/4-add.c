@@ -12,18 +12,13 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
-
-	int j;
+	int i, j, tmp;
 
 	j = 0;
-
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			int tmp;
-
 			for (tmp = 0; tmp < strlen(argv[i]); tmp++)
 			{
 				if (!(isdigit(argv[i][tmp])))
@@ -32,10 +27,8 @@ int main(int argc, char *argv[])
 					return (1);
 				}
 			}
-
 			j += atoi(argv[i]);
 		}
-
 		printf("%d\n", j);
 	}
 	else
