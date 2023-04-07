@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
 			}
 			j += atoi(argv[i]);
 		}
+
 		printf("%d\n", j);
 	}
 	else
