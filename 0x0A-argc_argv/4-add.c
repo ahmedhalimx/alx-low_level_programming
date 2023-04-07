@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <ctype.h>
 #include "main.h"
 /**
@@ -13,23 +14,25 @@ int main(int argc, char *argv[])
 {
 	int i, j;
 
-	j = 0;
-
-	for (i = 0; i < argc; i++)
+	if (argc == 1)
+		printf("0\n");
+	else
 	{
-		if (isdigit(argv[i]))
+		j = 0;
+		for (i = 1; i < argc; i++)
 		{
-			j += atoi(argv[i]);
+			if (isdigit(argv[i]))
+			{
+				j += atoi(argv[i]);
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		printf("%d\n", j);
 	}
-
-	printf("%d\n", j);
-
 	return (0);
 }
 
