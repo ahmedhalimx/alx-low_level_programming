@@ -13,7 +13,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int i;
+
+	int j;
 
 	j = 0;
 
@@ -31,6 +33,7 @@ int main(int argc, char *argv[])
 					return (1);
 				}
 			}
+
 			j += atoi(argv[i]);
 		}
 
