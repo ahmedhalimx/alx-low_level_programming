@@ -8,14 +8,24 @@
  * @size: number of times to allocate
  * @c: object to allocate for
  *
- * Return: (char*) an array.
+ * Return: an array.
  */
 
 char *create_array(unsigned int size, char c)
 {
+	int i;
+	char *arar;
+
 	if (size == 0)
 		retrun(NULL);
 
-	return ((char *)malloc(size * sizeof(c)));
+	arar = (char *)malloc(size * sizeof(c));
+	
+	for (i = 0; i < size; i++)
+	{
+		arar[i] = c;
+	}
+
+	return (arar);
 }
 
