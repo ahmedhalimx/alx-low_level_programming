@@ -29,7 +29,7 @@ char *_strdup(char *str)
 	if (strd == NULL)
 		return (NULL);
 
-	for (x = 0; str[x]; r++)
+	for (x = 0; str[x]; x++)
 		strd[x] = str[x];
 
 	return (strd);
