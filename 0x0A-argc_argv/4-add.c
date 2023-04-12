@@ -15,7 +15,8 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j, tmp;
+	int i, j;
+	unsigned int tmp;
 
 	j = 0;
 	if (argc > 1)
