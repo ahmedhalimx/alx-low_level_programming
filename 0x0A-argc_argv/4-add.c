@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "main.h"
+
 /**
  * main - prints the summation of 'n' numbers
  *
@@ -11,6 +11,7 @@
  *
  * Return: (0) on Success, (1) on Failure
  */
+
 int main(int argc, char *argv[])
 {
 	int i, j, tmp;
@@ -33,9 +34,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", j);
 	}
 	else
-	{
 		printf("0\n");
-	}
 	return (0);
 }
 
