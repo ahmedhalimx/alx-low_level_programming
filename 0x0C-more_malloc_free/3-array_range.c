@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * *array_range - creates an array of integers on the heap
- * 
+ * array_range - creates an array of integers on the heap
+ *
  * @min: minimum range of integers
  * @max: maximum range of integers
  *
@@ -18,7 +18,7 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 
-	p = malloc(sizeof(int) * max - min + 1);
+	p = malloc(sizeof(int) * (max - min + 1));
 
 	if (p == NULL)
 		return (NULL);
