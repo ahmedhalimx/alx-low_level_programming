@@ -13,8 +13,10 @@
 
 void *malloc_checked(unsigned int b)
 {
-	if (malloc(sizeof(b)) == NULL)
+	void *ptr;
+	ptr = malloc(sizeof(b));
+	if (ptr == NULL)
 		exit(98);
 	else
-		return (malloc(sizeof(b)));
+		return (ptr);
 }
