@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+/**
+ * main - function
+ */
+
 int main(int argc, char *argv[])
 {
 	int i;
@@ -18,17 +22,17 @@ int main(int argc, char *argv[])
 		{
 			printf("Error\n");
 			exit(98);
-		}	
+		}
 	}
 
 	for (i = 0; argv[2][i] != '\0'; ++i)
-        {
-                if (!(isdigit(argv[2][i])))
-                {
-                        printf("Error\n");
-                        exit(98);
-                }
-        }
+	{
+		if (!(isdigit(argv[2][i])))
+		{
+			printf("Error\n");
+			exit(98);
+		}
+	}
 
 	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 }
