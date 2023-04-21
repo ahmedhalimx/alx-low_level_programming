@@ -27,10 +27,10 @@ void print_all(const char *const format, ...)
 					printf(", %i", va_arg(arguments, int));
 					break;
 				case ('f'):
-					printf(", %f", va_arg(arguments, float));
+					printf(", %f", va_arg(arguments, double));
 					break;
 				case ('c'):
-					printf(", %c", va_arg(arguments, char));
+					printf(", %c", va_arg(arguments, int));
 					break;
 				case ('s'):
 					s = va_arg(arguments, char *);
@@ -39,8 +39,11 @@ void print_all(const char *const format, ...)
 						s = "(nil)";
 					printf(", %s", s);
 					break;
+				default:
+					i++;
+				continue;
 			}
-			++i;
+			i++;
 		}
 	printf("\n");
 	va_end(arguments);
