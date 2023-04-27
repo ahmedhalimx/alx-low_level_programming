@@ -4,11 +4,15 @@
 
 /**
  * add_node_end - adds a new node at the end of a linked list
- * @head: double pointer to the list_t list
- * @str: string to put in the new node
  *
- * Return: address of the new element, or NULL if it failed
+ * @head: a pointer to a pointer to an allocated memory on the
+ * heap that represent a node
+ *
+ * @str: string to duplicate with
+ *
+ * Return: a pointer to the last node on success, NULL otherwise
  */
+
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node;
@@ -35,4 +39,3 @@ list_t *add_node_end(list_t **head, const char *str)
 	tmp->next = new_node;
 	return (new_node);
 }
-
