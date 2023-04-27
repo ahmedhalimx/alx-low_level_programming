@@ -6,7 +6,7 @@
  * add_node_end - adds a new node at the end of a linked list
  *
  * @head: a pointer to a pointer to an allocated memory on the
- * heap that represent a node
+ * heap that represent a list_t object.
  *
  * @str: string to duplicate with
  *
