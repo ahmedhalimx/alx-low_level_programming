@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stddef.h>
+#include "lists.h"
+
+/**
+ * print_list - prints all elements in the list
+ *
+ * @h: a list_t argument
+ *
+ * Return: number of nodes
+ */
+
+size_t print_list(const list_t *h)
+{
+	size_t no_nodes = 0;
+	list_t *iterator = (list_t *)h;
+
+	while (iterator != NULL)
+	{
+		if (iterator->str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%d] %s\n", iterator->len, iterator->str);
+		iterator = iterator->next;
+		++no_nodes;
+	}
+	return (no_nodes);
+}
