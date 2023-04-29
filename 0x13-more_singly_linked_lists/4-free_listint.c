@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * free_list - Deallocates a listint_t object on the heap
+ * free_listint - Deallocates a listint_t object on the heap
  *
  * @head: A pointer to the first node in the list
  */
