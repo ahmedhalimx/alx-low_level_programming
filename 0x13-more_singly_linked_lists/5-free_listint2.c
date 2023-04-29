@@ -2,22 +2,25 @@
 #include "lists.h"
 
 /**
- * free_listint2 - Deallocates a listint_t object on the heap
+ * free_listint2 - Deallocates a linked list
  *
- * @head: A pointer to a pointer to the first node in the list
+ * @head: pointer to a pointer to listint_t object
  */
 
 void free_listint2(listint_t **head)
 {
 	listint_t *tmp;
 
-	while ((*head))
+	if (head == NULL)
+		return;
+
+	while (*head)
 	{
-		tmp = (*head);
+		tmp = (*head)->next;
 		free((*head));
-		(*head) = tmp->next;
+		(*head) = tmp;
 	}
 
-	head = NULL;
+	(*head) = NULL;
 }
 
