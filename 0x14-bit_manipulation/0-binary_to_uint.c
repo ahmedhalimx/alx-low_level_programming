@@ -2,7 +2,7 @@
 
 /**
  * binary_to_uint - converts a binary number to decimal number
- * 
+ *
  * @b: a string argument that represent the binary number
  *
  * Return: decimal on success, (0) otherwise
