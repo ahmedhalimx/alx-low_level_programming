@@ -2,6 +2,7 @@
 
 /**
  * hash_table_create - Creates a hash table.
+ *
  * @size: an int.
  *
  * Return: A pointer to the new hash table.
@@ -29,7 +30,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	while (i < size)
 	{
 		hash_table->array[i] = NULL;
-		i++;
+		++i;
 	}
 	return (hash_table);
 }

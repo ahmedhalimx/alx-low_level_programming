@@ -11,15 +11,15 @@ void hash_table_print(const hash_table_t *hash_table)
 	unsigned long int i = 0, count = 0;
 	hash_node_t *node;
 
-	if (!hash_table)
+	if (hash_table = NULL)
 		return;
 	printf("{");
 	for (i = 0; i < hash_table->size; i++)
 	{
-		if (!hash_table->array[i])
+		if (hash_table->array[i] == NULL)
 		{
 			node = hash_table->array[i];
-			while (!node)
+			while (node == NULL)
 			{
 				if (count > 0)
 					printf(", ");
