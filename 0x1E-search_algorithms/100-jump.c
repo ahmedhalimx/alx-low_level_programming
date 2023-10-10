@@ -1,37 +1,6 @@
 #include "search_algos.h"
 
 /**
- * square_root - computes the square root of a number
- *
- * @num: integer argument
- *
- * Return: square root of @num
- */
-
-size_t square_root(size_t num)
-{
-	size_t result = 0, bit = 1 << 30;
-
-	while (bit > num)
-		bit >>= 2;
-
-	while (bit != 0)
-	{
-		if (num >= result + bit)
-		{
-			num -= result + bit;
-			result = (result >> 1) + bit;
-		}
-		else
-		{
-			result >>= 1;
-		}
-		bit >>= 2;
-	}
-	return (result);
-}
-
-/**
  * jump_search - implements the jump search algorithm
  *
  * @array: array to search in
@@ -44,19 +13,20 @@ size_t square_root(size_t num)
 
 int jump_search(int *array, size_t size, int value)
 {
-	const size_t jump_size = square_root(size);
-	size_t i, srch_indx = 0;
+	const size_t jump_step = sqrt(size);
+	size_t i = 0, start_indx = 0, last_indx = 0;
 
-	while (array[srch_indx] < value && srch_indx < size)
+	while (array[last_indx] < value && last_indx < size)
 	{
 		printf("Value checked array[%lu] = [%d]\n",
-				srch_indx, array[srch_indx]);
-		srch_indx += jump_size;
+				last_indx, array[last_indx]);
+		start_indx = last_indx;
+		last_indx += jump_step;
 	}
 	printf("Value found between indexes [%lu] and [%lu]\n",
-			(srch_indx - jump_size), srch_indx);
+			start_indx, last_indx);
 
-	for (i = srch_indx - jump_size; i < size && i <= srch_indx; ++i)
+	for (i = start_indx; i < size && i <= last_indx; ++i)
 	{
 		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
 		if (array[i] == value)
