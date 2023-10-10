@@ -16,6 +16,9 @@ int jump_search(int *array, size_t size, int value)
 	const size_t jump_step = sqrt(size);
 	size_t i = 0, start_indx = 0, last_indx = 0;
 
+	if (!array || size == 0)
+		return (-1);
+
 	while (array[last_indx] < value && last_indx < size)
 	{
 		printf("Value checked array[%lu] = [%d]\n",
